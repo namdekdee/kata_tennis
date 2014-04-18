@@ -15,4 +15,11 @@ public class KataTennisTest {
 		String score = tennisGame.getScore();
 		assertEquals("Love all", score);
 	}
+	
+	@Test
+	public void playerAWinFirstballShouldReturnFifteenZero() throws Exception {
+		KataTennis tennisGame = new KataTennis("Player A", "Player B");
+		String score = tennisGame.getScore(15,0);
+		assertEquals("Fifteen Zero", score);
+	}
 }
