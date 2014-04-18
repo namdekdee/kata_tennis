@@ -47,6 +47,12 @@ public class KataTennisTest {
 		score = tennisGame.getScore(30,15);
 		assertEquals("Thirty Fifteen", score);
 	}
+	
+	@Test
+	public void playerBWinFifteenThirtyShouldReturnFifteenThirty() throws Exception {
+		score = tennisGame.getScore(15,30);
+		assertEquals("Fifteen Thirty", score);
+	}
 
 	
 	
