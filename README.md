@@ -1,3 +1,3 @@
 kata_tennis
 ===========
-nam
+nam->korn
