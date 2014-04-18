@@ -11,7 +11,6 @@ import org.junit.Test;
 public class KataTennisTest {
 	
 	private KataTennis tennisGame;
-	private String score = null;
 
 	@Before
 	public void setUp() {
@@ -21,51 +20,43 @@ public class KataTennisTest {
 	@Test
 	public void newGameShouldReturnLoveAll() throws Exception {
 		tennisGame.currentscore(0,0);
-		
-		score = tennisGame.getScore(0,0);
-		assertEquals("Love all", score);
+		assertEquals("Love all", tennisGame.getScore(0,0));
 	}
 	
 	@Test
 	public void playerAWinFirstballShouldReturnFifteenZero() throws Exception {
 		tennisGame.currentscore(0,0);
-		
-		score = tennisGame.getScore(15,0);
-		assertEquals("Fifteen Zero", score);
+		assertEquals("Fifteen Zero", tennisGame.getScore(15,0));
 	}
 	
 	@Test
 	public void playerBWinFirstballShouldReturnZeroFifteen() throws Exception {
 		tennisGame.currentscore(0,0);
-		
-		score = tennisGame.getScore(0,15);
-		assertEquals("Zero Fifteen", score);
+		assertEquals("Zero Fifteen", tennisGame.getScore(0,15));
 	}
 	
 	@Test
 	public void currentScoreFifteenZeroPlayerBWinSholdReturnFifteenFifteen() throws Exception {
 		tennisGame.currentscore(15,0);
-		
-		score = tennisGame.getScore(0,15);
-		assertEquals("Fifteen Fifteen", score);
+		assertEquals("Fifteen Fifteen", tennisGame.getScore(0,15));
 	}
-//	
-//	@Test
-//	public void playerAWinThirtyFifteenShouldReturnThirtyFifteen() throws Exception {
-//		score = tennisGame.getScore(30,15);
-//		assertEquals("Thirty Fifteen", score);
-//	}
-//	
-//	@Test
-//	public void playerBWinFifteenThirtyShouldReturnFifteenThirty() throws Exception {
-//		score = tennisGame.getScore(15,30);
-//		assertEquals("Fifteen Thirty", score);
-//	}
-//
-//	@Test
-//	public void playerDrawAllThirtyShouldReturnThirtyThirty() throws Exception {
-//		score = tennisGame.getScore(30,30);
-//		assertEquals("Thirty Thirty", score);
-//	}
+	
+	@Test
+	public void currentScoreFifteenZeroPlayerAWinSholdReturnThirtyFifteen() throws Exception {
+		tennisGame.currentscore(15,15);
+		assertEquals("Thirty Fifteen", tennisGame.getScore(15,0));
+	}
+	
+	@Test
+	public void playerBWinFifteenThirtyShouldReturnFifteenThirty() throws Exception {
+		tennisGame.currentscore(15,15);
+		assertEquals("Fifteen Thirty", tennisGame.getScore(0,15));
+	}
+
+	@Test
+	public void playerDrawAllThirtyShouldReturnThirtyThirty() throws Exception {
+		tennisGame.currentscore(30,15);
+		assertEquals("Thirty Thirty",  tennisGame.getScore(0,15));
+	}
 	
 }

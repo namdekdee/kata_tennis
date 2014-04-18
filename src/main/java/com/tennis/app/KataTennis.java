@@ -1,5 +1,8 @@
 package com.tennis.app;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Hello world!
  * 
@@ -16,28 +19,14 @@ public class KataTennis {
 		this.scoreA += scoreA;
 		this.scoreB += scoreB;
 		
-		if ((this.scoreA == this.scoreB) && this.scoreA == 0) {
+		Map<Integer, String>  intScoreToString = new HashMap<Integer, String>();
+		intScoreToString.put(0, "Zero");
+		intScoreToString.put(15, "Fifteen");
+		intScoreToString.put(30, "Thirty");
+		intScoreToString.put(40, "Forty");
+		if(this.scoreA == this.scoreB && this.scoreA == 0)
 			return "Love all";
-		}
-		if (this.scoreA == 15 && this.scoreB == 0){
-			return "Fifteen Zero";
-		}
-		if (this.scoreA == 0 && this.scoreB == 15) {
-			return "Zero Fifteen";
-		}
-		if (this.scoreA == 15 && this.scoreB == 15) {
-			return "Fifteen Fifteen";
-		}
-		if (scoreA == 30 && scoreB == 15) {
-			return "Thirty Fifteen";
-		}
-		if (scoreA == 15 && scoreB == 30) {
-			return "Fifteen Thirty";
-		}
-		if (scoreA == 30 && scoreB == 30) {
-			return "Thirty Thirty";
-		}
-		return "Love all";
+		return intScoreToString.get(this.scoreA) + " " + intScoreToString.get(this.scoreB);
 	}
 
 	public void currentscore(int scoreA, int scoreB) {
