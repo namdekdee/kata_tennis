@@ -1,3 +1,3 @@
 kata_tennis
 ===========
-nam -> korn -> aek -> prem -> falom -> BoAt -> GoT -> Joomla -> Birddddddd
+namdekdee -> korn -> aek -> prem -> falom -> BoAt -> GoT -> Joomla -> Birddddddd
