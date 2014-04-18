@@ -47,6 +47,7 @@ public class KataTennisTest {
 		score = tennisGame.getScore(30,15);
 		assertEquals("Thirty Fifteen", score);
 	}
+
 	
 	
 }

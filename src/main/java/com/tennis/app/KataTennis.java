@@ -24,7 +24,9 @@ public class KataTennis {
 		if (i == 15 && j == 15) {
 			return "Fifteen Fifteen";
 		}
-
+		if (i == 30 && j == 15) {
+			return "Thirty Fifteen";
+		}
 		return "Love all";
 	}
 }
