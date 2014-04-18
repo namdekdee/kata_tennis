@@ -1,16 +1,17 @@
 package com.tennis.app;
 
-import static org.junit.Assert.*;
-import junit.framework.Test;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
 public class KataTennisTest {
-	
+
 	@Test
 	public void newGameShouldReturnLoveAll() throws Exception {
-		TennisGame tennisGame = new TennisGame("Player A", "Player B");
+		KataTennis tennisGame = new KataTennis("Player A", "Player B");
 		String score = tennisGame.getScore();
 		assertEquals("Love all", score);
 	}

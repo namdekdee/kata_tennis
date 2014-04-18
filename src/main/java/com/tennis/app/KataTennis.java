@@ -2,12 +2,16 @@ package com.tennis.app;
 
 /**
  * Hello world!
- *
+ * 
  */
-public class KataTennis 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+public class KataTennis {
+	public KataTennis(String a, String b) {
+		// TODO Auto-generated constructor stub
+
+	}
+
+	public String getScore() {
+		// TODO Auto-generated method stub
+		return "Love all";
+	}
 }
