@@ -5,12 +5,12 @@ import java.util.Map;
 
 /**
  * Hello world!
- * 
+ *
  */
 public class KataTennis {
 	private int scoreA = 0;
 	private int scoreB = 0;
-	
+
 	public KataTennis(String playerA, String playerB) {
 
 	}
@@ -18,14 +18,16 @@ public class KataTennis {
 	public String getScore(int scoreA, int scoreB) {
 		this.scoreA += scoreA;
 		this.scoreB += scoreB;
-		
+
 		Map<Integer, String>  intScoreToString = new HashMap<Integer, String>();
 		intScoreToString.put(0, "Zero");
 		intScoreToString.put(15, "Fifteen");
 		intScoreToString.put(30, "Thirty");
 		intScoreToString.put(40, "Forty");
+
 		if(this.scoreA == this.scoreB && this.scoreA == 0)
 			return "Love all";
+
 		return intScoreToString.get(this.scoreA) + " " + intScoreToString.get(this.scoreB);
 	}
 
