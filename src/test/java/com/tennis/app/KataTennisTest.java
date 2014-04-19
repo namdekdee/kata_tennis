@@ -65,4 +65,9 @@ public class KataTennisTest {
 		assertEquals("Forty Fifteen",  tennisGame.getScore(15, 0));
 	}
 
+	@Test
+	public void currentScoreFortyFifteenPlayerAWinShouldReturnPlayerAWin() throws Exception {
+		tennisGame.currentscore(40, 15);
+		assertEquals("PlayerA Win",  tennisGame.getScore(15, 0));
+	}
 }

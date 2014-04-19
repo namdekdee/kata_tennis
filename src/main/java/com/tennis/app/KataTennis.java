@@ -10,9 +10,12 @@ import java.util.Map;
 public class KataTennis {
 	private int scoreA = 0;
 	private int scoreB = 0;
+    private String playerA = "";
+    private String playerB = "";
 
 	public KataTennis(String playerA, String playerB) {
-
+        this.playerA = playerA;
+        this.playerB = playerB;
 	}
 
 	public String getScore(int scoreA, int scoreB) {
@@ -27,6 +30,9 @@ public class KataTennis {
 
 		if(this.scoreA == this.scoreB && this.scoreA == 0)
 			return "Love all";
+
+        if(this.scoreA > 45)
+            return "PlayerA Win";
 
 		return intScoreToString.get(this.scoreA) + " " + intScoreToString.get(this.scoreB);
 	}
