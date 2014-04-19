@@ -23,7 +23,7 @@ public class KataTennis {
 		intScoreToString.put(0, "Zero");
 		intScoreToString.put(15, "Fifteen");
 		intScoreToString.put(30, "Thirty");
-		intScoreToString.put(40, "Forty");
+		intScoreToString.put(45, "Forty");
 
 		if(this.scoreA == this.scoreB && this.scoreA == 0)
 			return "Love all";
